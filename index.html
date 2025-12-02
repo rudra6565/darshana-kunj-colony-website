@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Darshana Kunj, Meerut – 2 & 3 BHK Luxury Flats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1020;
+      --bg-card: #111827;
+      --accent: #f97316;
+      --accent-soft: rgba(249, 115, 22, 0.12);
+      --accent-strong: #fb923c;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius-lg: 18px;
+      --shadow-soft: 0 22px 60px rgba(0,0,0,0.55);
+      --transition: 0.22s ease-out;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 60%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Layout helpers */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    section {
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    /* Navbar */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(2,6,23,0.96), rgba(2,6,23,0.70), transparent);
+      border-bottom: 1px solid rgba(148,163,184,0.18);
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #f97316, #7c2d12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.8), 0 18px 35px rgba(0,0,0,0.65);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-size: 0.92rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .brand-text span:last-child {
+      font-weight: 600;
+      font-size: 1.12rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-strong);
+      border-color: rgba(249,115,22,0.6);
+      transform: translateY(-1px);
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 0.55rem 1.4rem;
+      border: 1px solid rgba(249,115,22,0.4);
+      background: radial-gradient(circle at top left, var(--accent) 0, #7c2d12 45%, #020617 100%);
+      color: #fefce8;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(248,113,22,0.35);
+      transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(248,113,22,0.5);
+      opacity: 0.96;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(148,163,184,0.5);
+      box-shadow: none;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      background: rgba(15,23,42,0.9);
+      box-shadow: 0 12px 28px rgba(15,23,42,0.7);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .nav-phone {
+      display: none;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .nav-phone span {
+      font-weight: 500;
+      color: var(--accent-strong);
+      white-space: nowrap;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding-top: 4.5rem;
+      padding-bottom: 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.15fr);
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.35);
+      margin-bottom: 0.9rem;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(249,115,22,0.22);
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 3vw + 1.6rem, 3.2rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #f97316, #facc15, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 34rem;
+      line-height: 1.65;
+      margin-bottom: 1.7rem;
+    }
+
+    .hero-bullets {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-bottom: 1.7rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      color: var(--muted);
+    }
+
+    .hero-bullet-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(34,197,94,0.16);
+      border: 1px solid rgba(34,197,94,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      margin-top: 0.1rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-note span {
+      color: #bbf7d0;
+    }
+
+    .hero-right {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-card {
+      border-radius: 26px;
+      background: radial-gradient(circle at top left, rgba(248,113,22,0.28), transparent 55%),
+                  radial-gradient(circle at bottom, rgba(8,47,73,0.85), #020617 80%);
+      padding: 0.7rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148,163,184,0.35);
+      overflow: hidden;
+    }
+
+    .hero-img-wrap {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(15,23,42,0.9);
+      position: relative;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      transform: scale(1.02);
+      transition: transform 0.7s ease-out;
+    }
+
+    .hero-card:hover .hero-img {
+      transform: scale(1.05);
+    }
+
+    .hero-tag {
+      position: absolute;
+      left: 1.1rem;
+      bottom: 1.1rem;
+      padding: 0.35rem 0.9rem;
+      background: rgba(15,23,42,0.86);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      border: 1px solid rgba(148,163,184,0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-tag-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.28);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-stat {
+      background: rgba(15,23,42,0.9);
+      border-radius: 16px;
+      padding: 0.7rem 0.8rem;
+      border: 1px solid rgba(30,64,175,0.7);
+    }
+
+    .hero-stat-label {
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .hero-stat-value {
+      font-weight: 600;
+      margin-top: 0.18rem;
+      font-size: 0.9rem;
+    }
+
+    /* Section headings */
+
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .section-title {
+      font-size: 1.65rem;
+      font-weight: 600;
+    }
+
+    .section-title span {
+      color: var(--accent-strong);
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 30rem;
+    }
+
+    /* Highlights */
+
+    .highlights {
+      padding-top: 0;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1.2fr;
+      gap: 2.2rem;
+    }
+
+    .highlight-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    .card {
+      background: radial-gradient(circle at top, rgba(15,23,42,0.6), rgba(15,23,42,0.9));
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148,163,184,0.33);
+      padding: 1rem;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(248,113,22,0.18), transparent 55%);
+      opacity: 0;
+      transition: opacity var(--transition);
+      pointer-events: none;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .card-main {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-muted {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.45);
+      color: var(--muted);
+    }
+
+    .tag-pill strong {
+      color: #e5e7eb;
+      margin-left: 0.2rem;
+    }
+
+    .highlight-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      max-width: 30rem;
+    }
+
+    /* Gallery */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.4fr;
+      gap: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .gallery-main,
+    .gallery-side {
+      display: grid;
+      gap: 1.1rem;
+    }
+
+    .gallery-main {
+      grid-template-rows: 1.8fr 1.2fr;
+    }
+
+    .gallery-side {
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    .gallery-img-wrap {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(30,64,175,0.8);
+      background: #020617;
+      position: relative;
+      cursor: pointer;
+      min-height: 130px;
+    }
+
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.02);
+      transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+      opacity: 0.94;
+    }
+
+    .gallery-img-wrap:hover img {
+      transform: scale(1.06);
+      opacity: 1;
+    }
+
+    .badge {
+      position: absolute;
+      left: 0.75rem;
+      top: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.6);
+      font-size: 0.7rem;
+      color: #e5e7eb;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Floor plans */
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .plan-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148,163,184,0.4);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.6), #020617 65%);
+      padding: 1.1rem 1rem;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .plan-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+    }
+
+    .plan-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .plan-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.35rem;
+      font-size: 0.86rem;
+    }
+
+    .pill {
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    /* Amenities */
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .amenity {
+      border-radius: 999px;
+      border: 1px solid rgba(51,65,85,0.9);
+      background: rgba(15,23,42,0.95);
+      padding: 0.4rem 0.75rem;
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .amenity-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    /* Location */
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1.6fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .location-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.96);
+      padding: 1.2rem 1.1rem;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.6);
+      font-size: 0.86rem;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .location-points {
+      list-style: none;
+      display: grid;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+    }
+
+    .location-points li::before {
+      content: "•";
+      margin-right: 0.35rem;
+      color: var(--accent-strong);
+    }
+
+    .location-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .location-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .map-wrap {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(30,64,175,0.9);
+      box-shadow: 0 18px 45px rgba(15,23,42,0.9);
+      min-height: 260px;
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    /* Contact */
+
+    .contact {
+      padding-top: 4rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.8rem;
+    }
+
+    .contact-card {
+      border-radius: 22px;
+      border: 1px solid rgba(148,163,184,0.45);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.85), #020617 70%);
+      padding: 1.4rem 1.3rem;
+      box-shadow: 0 20px 55px rgba(0,0,0,0.7);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 0.6rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.32rem;
+      font-size: 0.8rem;
+    }
+
+    .field label {
+      color: var(--muted);
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 999px;
+      border: 1px solid rgba(51,65,85,0.9);
+      background: rgba(15,23,42,0.96);
+      padding: 0.5rem 0.85rem;
+      color: var(--text);
+      font-size: 0.86rem;
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+
+    .field textarea {
+      border-radius: 16px;
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--accent-strong);
+      box-shadow: 0 0 0 1px rgba(248,113,22,0.6);
+      background: #020617;
+    }
+
+    .contact-small {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.6rem;
+    }
+
+    .contact-highlight {
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-highlight span {
+      color: var(--accent-strong);
+      font-weight: 600;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact-list span {
+      color: #e5e7eb;
+    }
+
+    /* Footer */
+
+    .footer {
+      border-top: 1px solid rgba(15,23,42,0.9);
+      background: #020617;
+      padding: 1.4rem 0;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-inner strong {
+      color: #e5e7eb;
+    }
+
+    /* Floating WhatsApp */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 1.4rem;
+      bottom: 1.4rem;
+      z-index: 40;
+    }
+
+    .floating-whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 18px 40px rgba(22,163,74,0.8);
+      font-size: 1.6rem;
+      color: #022c22;
+      border: 2px solid #bbf7d0;
+      transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+    }
+
+    .floating-whatsapp a:hover {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 22px 60px rgba(22,163,74,0.95);
+      opacity: 0.96;
+    }
+
+    /* Responsive */
+
+    .nav-toggle {
+      display: none;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.96);
+      padding: 0.35rem 0.7rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-right {
+        order: -1;
+      }
+      .highlight-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .highlights {
+        padding-top: 2rem;
+      }
+      .plans-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .location-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-inner {
+        padding: 0.7rem 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        inset-inline: 0;
+        top: 100%;
+        background: rgba(2,6,23,0.98);
+        padding: 0.7rem 1.2rem 0.9rem;
+        border-bottom: 1px solid rgba(30,64,175,0.9);
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-right {
+        display: none;
+      }
+
+      .nav-phone {
+        display: block;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      section {
+        padding: 3.7rem 0;
+      }
+
+      .hero {
+        padding-top: 3.2rem;
+      }
+
+      .hero-title {
+        font-size: 2.05rem;
+      }
+
+      .hero-bullets {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .highlight-cards {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .plans-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .amenities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-img {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .amenities-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .floating-whatsapp {
+        right: 1rem;
+        bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Floating WhatsApp -->
+  <div class="floating-whatsapp">
+    <a href="https://wa.me/918384889392?text=Hi%20Darshana%20Kunj%2C%20I%20am%20interested%20in%202BHK%2F3BHK%20flat.%20Please%20call%20me." target="_blank" aria-label="Chat on WhatsApp">
+      💬
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <div class="brand">
+          <div class="brand-logo">DK</div>
+          <div class="brand-text">
+            <span>Meerut • Gated Living</span>
+            <span>Darshana Kunj</span>
+          </div>
+        </div>
+
+        <button class="nav-toggle" id="navToggle">Menu</button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#highlights">Highlights</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#plans">2 &amp; 3 BHK Plans</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+          <a class="btn-outline" href="tel:+918384889392">Call: 8384889392</a>
+          <a class="btn" href="#contact">Schedule Site Visit →</a>
+        </div>
+
+        <div class="nav-phone">
+          Call: <span>+91 83848 89392</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="eyebrow">
+            <div class="eyebrow-dot"></div>
+            Premium Residential Colony • Meerut
+          </div>
+          <h1 class="hero-title">
+            2 &amp; 3 BHK <span>Luxury Flats</span><br />
+            in the heart of Meerut.
+          </h1>
+          <p class="hero-subtitle">
+            Darshana Kunj is a premium gated colony in Meerut with spacious 2 &amp; 3 BHK apartments,
+            wide roads, secure entry and a peaceful residential environment.
+            Weekend ho ya weekday – yahi se shuru hoti hai perfect family life.
+          </p>
+
+          <div class="hero-bullets">
+            <div class="hero-bullet">
+              <div class="hero-bullet-icon">✓</div>
+              <div>
+                <strong>Vastu-Friendly Layouts</strong><br />
+                Cross-ventilated rooms, ample sunlight, well planned balconies.
+              </div>
+            </div>
+            <div class="hero-bullet">
+              <div class="hero-bullet-icon">✓</div>
+              <div>
+                <strong>2BHK &amp; 3BHK Options</strong><br />
+                Multiple sizes to choose from – perfect for nuclear &amp; joint families.
+              </div>
+            </div>
+            <div class="hero-bullet">
+              <div class="hero-bullet-icon">✓</div>
+              <div>
+                <strong>Secure &amp; Peaceful Colony</strong><br />
+                Gated entry, wide internal roads, neat surroundings.
+              </div>
+            </div>
+            <div class="hero-bullet">
+              <div class="hero-bullet-icon">✓</div>
+              <div>
+                <strong>All Daily Needs Nearby</strong><br />
+                Schools, hospitals, markets and commuting options within easy reach.
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn" href="tel:+918384889392">
+              Call Now for Best Deal
+            </a>
+            <a class="btn-outline" href="#contact">
+              Get a Call Back
+            </a>
+          </div>
+          <div class="hero-note">
+            Limited premium units available. <span>Book a site visit today.</span>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-img-wrap">
+              <!-- HERO IMAGE – replace with actual colony image -->
+              <img
+                src="images/darshana-hero.jpg"
+                alt="Darshana Kunj – Premium residential colony in Meerut"
+                class="hero-img"
+              />
+              <div class="hero-tag">
+                <div class="hero-tag-dot"></div>
+                Ready for family living • Darshana Kunj, Meerut
+              </div>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-label">Configuration</div>
+                <div class="hero-stat-value">2 &amp; 3 BHK</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Location</div>
+                <div class="hero-stat-value">Meerut, Uttar Pradesh</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Booking</div>
+                <div class="hero-stat-value">Call 8384889392</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- hero-grid -->
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="highlights" id="highlights">
+    <div class="container">
+      <div class="highlight-grid">
+        <div>
+          <div class="section-heading">
+            <div class="section-kicker">Why Darshana Kunj</div>
+            <h2 class="section-title">
+              Thoughtfully planned for <span>modern living</span>.
+            </h2>
+            <p class="section-sub">
+              Yeh sirf flat nahi, ek complete lifestyle hai – jahan planning, construction
+              quality aur location tino ka perfect balance milta hai.
+            </p>
+          </div>
+
+          <div class="highlight-cards">
+            <div class="card">
+              <div class="card-label">Configuration</div>
+              <div class="card-main">Spacious 2 &amp; 3 BHK</div>
+              <div class="card-muted">
+                Smart layouts with proper drawing room, dining space and balconies.
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Colony</div>
+              <div class="card-main">Gated &amp; Secure</div>
+              <div class="card-muted">
+                Single entry/exit, wide internal roads and neat neighbourhood.
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Lifestyle</div>
+              <div class="card-main">Family-Friendly</div>
+              <div class="card-muted">
+                Safe environment for kids, elders and working professionals alike.
+              </div>
+            </div>
+          </div>
+
+          <p class="highlight-note">
+            Har family ka requirement alag hota hai – isiliye hum 2BHK se lekar 3BHK tak
+            multiple options provide karte hain, taaki aap budget aur space dono ka best
+            decision le sako.
+          </p>
+
+          <div style="margin-top: 1rem;">
+            <span class="tag-pill">
+              Site Visit Booking:
+              <strong>+91 83848 89392</strong>
+            </span>
+          </div>
+        </div>
+
+        <!-- Gallery intro (small) -->
+        <div>
+          <div class="section-heading" style="margin-bottom: 1.2rem;">
+            <div class="section-kicker">Inside the Colony</div>
+            <h3 class="section-title" style="font-size: 1.3rem;">
+              Clean internal roads &amp; ready flats.
+            </h3>
+            <p class="section-sub">
+              Colony ke asli look &amp; feel ke liye images scroll karein –
+              jo photos aapke paas hain unko yahan laga dena.
+            </p>
+          </div>
+
+          <ul class="location-points" style="font-size: 0.85rem;">
+            <li>Neat entry gate with residential surroundings.</li>
+            <li>Proper parking space (as per available planning).</li>
+            <li>Good light &amp; ventilation across the flats.</li>
+            <li>Peaceful &amp; family dominated neighbourhood.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-kicker">Project Gallery</div>
+        <h2 class="section-title">
+          Real views from <span>Darshana Kunj</span>.
+        </h2>
+        <p class="section-sub">
+          Yahan colony aur flats ki asli photos dikhaani hain – neeche diye gaye
+          placeholders ko apne actual images se replace kar dena.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-main">
+          <div class="gallery-img-wrap">
+            <!-- Main wide image – Replace -->
+            <img src="images/colony-road.jpg" alt="Internal roads and colony view at Darshana Kunj" />
+            <div class="badge">Colony Approach Road</div>
+          </div>
+          <div class="gallery-img-wrap">
+            <!-- Replace -->
+            <img src="images/entrance-gate.jpg" alt="Entry gate of Darshana Kunj colony" />
+            <div class="badge">Entry Gate</div>
+          </div>
+        </div>
+
+        <div class="gallery-side">
+          <div class="gallery-img-wrap">
+            <!-- Replace -->
+            <img src="images/2bhk-living.jpg" alt="2BHK living room sample at Darshana Kunj" />
+            <div class="badge">2BHK Living</div>
+          </div>
+          <div class="gallery-img-wrap">
+            <!-- Replace -->
+            <img src="images/bedroom.jpg" alt="Bedroom with natural light" />
+            <div class="badge">Bedroom</div>
+          </div>
+          <div class="gallery-img-wrap">
+            <!-- Replace -->
+            <img src="images/balcony-view.jpg" alt="Balcony view from flat at Darshana Kunj" />
+            <div class="badge">Balcony View</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floor Plans / Configurations -->
+  <section id="plans">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-kicker">Available Configurations</div>
+        <h2 class="section-title">
+          Choose your <span>ideal flat</span>.
+        </h2>
+        <p class="section-sub">
+          Neeche jo sizes likhe hain unko aap apne actual sqft ke hisaab se edit kar sakte ho.
+          Idea yeh hai ki client ko clean &amp; clear configuration samaj aa jaye.
+        </p>
+      </div>
+
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-title">2 BHK Comfort</div>
+          <div class="plan-meta">
+            <span>Approx. 1000–1150 sq.ft.*</span>
+          </div>
+          <div class="plan-row">
+            <span>Ideal for small families / working couples.</span>
+          </div>
+          <div class="plan-row">
+            <span class="pill">2 Bedrooms</span>
+            <span class="pill">Drawing + Dining</span>
+          </div>
+          <div class="plan-row">
+            <span class="pill">Balcony</span>
+            <span class="pill">Attached Washroom</span>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-title">2 BHK Premium</div>
+          <div class="plan-meta">
+            <span>Approx. 1150–1250 sq.ft.*</span>
+          </div>
+          <div class="plan-row">
+            <span>Extra spacious hall &amp; better balcony space.</span>
+          </div>
+          <div class="plan-row">
+            <span class="pill">Wide Living Area</span>
+            <span class="pill">Modular Kitchen (Option)</span>
+          </div>
+          <div class="plan-row">
+            <span class="pill">Extra Storage Space</span>
+            <span class="pill">Vastu Friendly</span>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-title">3 BHK Family</div>
+          <div class="plan-meta">
+            <span>Approx. 1350–1500 sq.ft.*</span>
+          </div>
+          <div class="plan-row">
+            <span>Perfect for growing / joint families.</span>
+          </div>
+          <div class="plan-row">
+            <span class="pill">3 Bedrooms</span>
+            <span class="pill">Spacious Dining</span>
+          </div>
+          <div class="plan-row">
+            <span class="pill">Balcony</span>
+            <span class="pill">Attached Washrooms</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 0.9rem; font-size: 0.78rem; color: var(--muted);">
+        *Note: Exact size, pricing &amp; availability ke liye please direct call karein:
+        <strong style="color:#e5e7eb;">+91 83848 89392</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Amenities & Location -->
+  <section id="location">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-kicker">Amenities &amp; Connectivity</div>
+        <h2 class="section-title">
+          Daily life ke liye <span>perfect combination</span>.
+        </h2>
+        <p class="section-sub">
+          Jo cheezein ek achhi residential colony me mandatory hoti hain –
+          un sab ka dhyaan rakha gaya hai. Neeche sample points diye gaye hain,
+          aap apni real details ke hisaab se edit kar sakte ho.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <div>
+          <h3 style="font-size: 1.05rem; margin-bottom: 0.6rem;">Amenities snapshot</h3>
+          <div class="amenities-grid">
+            <div class="amenity">
+              <div class="amenity-dot"></div> Gated Colony
+            </div>
+            <div class="amenity">
+              <div class="amenity-dot"></div> Wide Internal Road
+            </div>
+            <div class="amenity">
+              <div class="amenity-dot"></div> 24x7 Water* <!-- edit as per actual -->
+            </div>
+            <div class="amenity">
+              <div class="amenity-dot"></div> Power Backup* <!-- edit -->
+            </div>
+            <div class="amenity">
+              <div class="amenity-dot"></div> Parking Space
+            </div>
+            <div class="amenity">
+              <div class="amenity-dot"></div> Kids Friendly Area
+            </div>
+            <div class="amenity">
+              <div class="amenity-dot"></div> Nearby Schools
+            </div>
+            <div class="amenity">
+              <div class="amenity-dot"></div> Markets &amp; Hospital
+            </div>
+          </div>
+
+          <div class="location-card" style="margin-top: 1.3rem;">
+            <div class="location-label">Approx. distances* (edit as per actual)</div>
+            <ul class="location-points">
+              <li>Nearby School – 5–10 min drive</li>
+              <li>Nearest Hospital – within 10–15 min</li>
+              <li>Main Market / Daily Needs – reachable within few minutes</li>
+              <li>Key City Junctions – well connected by road</li>
+            </ul>
+            <div style="font-size:0.78rem; margin-top:0.6rem;">
+              *Distances &amp; timings are indicative. Exact location details ke liye
+              please call / WhatsApp karein.
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <!-- GOOGLE MAPS EMBED – search me Darshana Kunj, Meerut ka link dal sakte ho -->
+          <iframe
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb="
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-kicker">Book a Visit / Enquiry</div>
+        <h2 class="section-title">
+          Talk to <span>Darshana Kunj</span> team.
+        </h2>
+        <p class="section-sub">
+          Neeche basic enquiry form diya hua hai. Form submit karte hi aapke
+          phone se WhatsApp / call open ho jayega jisse direct connect kar sakte ho.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-highlight">
+            Best deals available on <span>2 &amp; 3 BHK units</span>.
+          </div>
+          <p class="contact-small">
+            Fill the form below &amp; hum aapse jaldi contact karenge.
+          </p>
+
+          <form class="contact-form" id="enquiryForm">
+            <div class="field">
+              <label for="name">Full Name*</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="field">
+              <label for="phone">Mobile Number*</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" required />
+            </div>
+            <div class="field">
+              <label for="config">Interested In</label>
+              <input type="text" id="config" name="config" placeholder="2BHK / 3BHK / Not sure yet" />
+            </div>
+            <div class="field">
+              <label for="message">Message (optional)</label>
+              <textarea id="message" name="message" placeholder="When would you like to visit?"></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+              Submit &amp; Open WhatsApp →
+            </button>
+
+            <div class="contact-small">
+              Direct call / WhatsApp:
+              <strong style="color:#e5e7eb;">+91 83848 89392</strong>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <div class="contact-card" style="height:100%; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <h3 style="font-size: 1rem; margin-bottom: 0.6rem;">Direct Contact Details</h3>
+              <ul class="contact-list">
+                <li>Call / WhatsApp: <span>+91 83848 89392</span></li>
+                <li>City: <span>Meerut, Uttar Pradesh</span></li>
+                <li>Project Name: <span>Darshana Kunj</span></li>
+              </ul>
+            </div>
+            <div class="contact-small">
+              Aap chahein toh client ke naam / company ka naam yahan add kar sakte ho,
+              jaise “Dream’s Properties – Official Channel Partner of Darshana Kunj”.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          © <span id="yearSpan"></span> Darshana Kunj, Meerut. All rights reserved.
+        </div>
+        <div>
+          Site enquiries:&nbsp;<strong>+91 83848 89392</strong>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div> <!-- page -->
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    navLinks.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+      });
+    });
+  }
+
+  // Contact form – open WhatsApp with pre-filled message
+  const form = document.getElementById("enquiryForm");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const config = document.getElementById("config").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !phone) {
+        alert("Please enter your name and mobile number.");
+        return;
+      }
+
+      let text =
+        "Namaste, I am " + name +
+        ". I am interested in a flat at Darshana Kunj, Meerut.";
+
+      if (config) {
+        text += " Configuration preference: " + config + ".";
+      }
+
+      text += " My contact number is " + phone + ".";
+
+      if (message) {
+        text += " Message: " + message;
+      }
+
+      const encoded = encodeURIComponent(text);
+      const url = "https://wa.me/918384889392?text=" + encoded;
+
+      window.open(url, "_blank");
+    });
+  }
+
+  // Footer year
+  const yearSpan = document.getElementById("yearSpan");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+</body>
+</html>
